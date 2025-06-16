@@ -1,3 +1,4 @@
+import pytest
 from playwright.sync_api import Page, Playwright, sync_playwright, expect
 
 def practice_form(page: Page):
@@ -25,11 +26,10 @@ def run(playwright: Playwright):
     browser = firefox.launch(headless=False)
     page = browser.new_page()
     url = "https://demoqa.com/automation-practice-form"
-
     page.goto(url)
     practice_form(page)
-    expect(page.get_by_text("Thanks for submitting the form")).to_be_visible()
-    # page.pause()
+    expect(page.locator("#example-modal-sizes-title-lg")).to_contain_text("Thanks for submitting the form")
+#  page.pause()
     browser.close()
 
 

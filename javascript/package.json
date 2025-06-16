@@ -5,10 +5,9 @@
   "scripts": {
     "test":"npx playwright test && yarn playwright show-report",
     "test-1":"npx playwright test tests/example.spec",
-    "test-2":"npx playwright test tests/example.spec:3",
     "test-project":"npx playwright test tests/example.spec",
     "report":"yarn playwright show-report",
-    "test-demo":"npx playwright test demo-todo-app.spec.ts ",
+    "demo":"npx playwright test demo-todo-app.spec.ts ",
     "smoke-test":"npx playwright test --grep @smoke",
     "ui":"npx playwright test --ui"
   },
